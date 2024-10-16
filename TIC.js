@@ -3,8 +3,11 @@ let reset=document.querySelector(".button")
 let reset2=document.querySelector(".button2")
 let msgcon=document.querySelector(".msgcon")
 let msg=document.querySelector(".msg")
+let game=document.querySelector("#game")
+let main=document.querySelector("#body")
+
 let h1=document.querySelector("#h1")
-let turn=true;
+let turn=true; 
 let innerarr=0;
 let count=0;
 let winpettern=[
@@ -17,8 +20,9 @@ let winpettern=[
 [2,4,6],
 [0,4,8],
 ]
-let random=Math.floor(Math.random()*8)
-console.log(random)
+let random=Math.floor(Math.random()*9)
+console.log(random,"random")
+console.log(winpettern[random])
 
 
 boxes.forEach((box)=>{
@@ -41,7 +45,11 @@ checkwinner();
 function showwinner(){
 msgcon.classList.remove("hide")
 msg.innerText=`CONGRUTULATON! `
-h1.style.marginTop="10vw"
+h1.style.display="none"
+game.style.display="none"
+reset.style.display="none"
+body.style.background="pink"
+
 }
 
 reset2.addEventListener("click",()=>{
@@ -101,19 +109,19 @@ function draw(){
     function computer(){if(turn==false){
 
 
-if(boxes[winpettern[random][innerarr]].innerText==="0"||boxes[winpettern[random][innerarr]].innerText==="X"){
+if(boxes[winpettern[random][innerarr]].innerText==="X"){
 
-           if(boxes[winpettern[random][innerarr]].innerText===" "||boxes[winpettern[random][innerarr]].innerText===" ")
+           if(boxes[winpettern[random][innerarr]].innerText===" ")
               {  boxes[winpettern[random][innerarr]].innerText="0"
                     innerarr++
                           turn=true
 
                                }
-
+                                                                                                                                                     
                                             innerarr=0;
                                             random++
 
-                                               if(random=7){
+                                               if(random===8){
                                                 random=1;
                                               boxes[winpettern[random][innerarr]].innerText="0"
                                                     innerarr++
@@ -130,3 +138,4 @@ if(boxes[winpettern[random][innerarr]].innerText==="0"||boxes[winpettern[random]
     turn=true
 
 }}}
+
