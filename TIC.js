@@ -138,4 +138,3 @@ if(boxes[winpettern[random][innerarr]].innerText==="X"){
     turn=true
 
 }}}
-
