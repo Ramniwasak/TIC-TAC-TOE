@@ -4,50 +4,51 @@
 }
 body{
     text-align: center;
-    background-color:#87A922 ;
+    background-color:#FCCD2A ;
 }
 h1{
-font-size: 5vh;
-color: white;
+font-size: 10vh;
+color: rgb(8, 6, 6);
 }
-#con{
-    height: 80vh;
+ #con{ 
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
-}
+} 
 #game{
-    height: 60vh;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    height: 50vh;
+    width: 50vh;
+    display: grid;
+    grid-template-columns:repeat(3,3fr);
     background-color: #114232;
-    gap: 2px;
+    gap: 1vh;
     border-radius: 5vh;
     border: 2px solid #F7F6BB;
+    padding:  4vw 4vw 4vw 4vw;
+    margin: 3vh 3vh 3vh 3vh;
 }
 .boxes{
-    height: 18vh;
-    width: 13vw;
-    background-color: #FCDC2A;
-    border: 3px solid #F7F6BB;
+    height:12vh;
+    width: 12vh;
+    position: relative;
+     border: 3px solid #F7F6BB;
     border-radius: 5vh;
-    font-size: large;
-    text-align: center;
+    text-align:center;
     box-shadow:2px 2px 2px 2px  black;
-font-size: 10vh;
-color: white;
+font-size:5vh;
+color: black;
 }
 .button{
-    height: 5vh;
+    height: 50px;
+    width: 150px;
     color:black;
-    background-color: #F7F6BB;
-    border: 2px solid black;
-    border-radius: 1vh;
+    background-color: #654e87;
+    border: 2px solid white;
+    border-radius: 2.5vh;
     font-weight: 1000;
 }
 #hh{
@@ -66,7 +67,7 @@ font-weight: bold;
     display: none;
 }
 .msg{
-    color: white;
+    color: black;
     line-height: 6vh;
     font-size: 3vh;
 }
